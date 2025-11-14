@@ -22,9 +22,14 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     size = models.CharField(max_length=254)
     original_art = models.URLField(max_length=1024, null=True, blank=True)
+    
+    @property
+    def first_image(self):
+        return self.images.first()  # gets the first related Image object 
 
     def __str__(self):
-        return self.name    
+        return self.name   
+    
     
 
 class Image(models.Model):
