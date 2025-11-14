@@ -18,7 +18,10 @@ body {
     height: 1.5rem;
     width: 1.5rem;
 }
+.delivery{
+     background: linear-gradient(to right, #03f10b, #1434ed,rgb(225, 11, 182),rgb(159, 2, 10));
 
+}
 .logo {
     font-size: 2rem;
     font-weight: 900;
@@ -50,6 +53,7 @@ body {
 .shop-now-button {
     background: white;
     color: black;
+    border-color: #000;
     min-width: 260px;
 }
 
@@ -67,6 +71,7 @@ body {
 .btn-black:active,
 .btn-black:focus {
     background: black;
+    border-color: white;
     color: white;
 }
 
