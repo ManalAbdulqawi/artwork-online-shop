@@ -35,8 +35,15 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <h2 class="mb-2 text-black">{{ product.name }}</h2>
+                    <h2 class="text-black">{{ product.name }}</h2>
                     <p> {{ product.description }}</p>
+                     {% if product.category %}
+                      <p class="small">
+                           <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                              <i class="fas fa-tag mr-1 mb-2"></i>{{ product.category.friendly_name }}
+                            </a>
+                      </p>
+                    {% endif %}
                     <p class="lead mb-0 text-left ">Price: £{{ product.price }}</p>
                     <p class="lead mb-0 text-left ">Size: {{ product.size }}</p>
                   {% if product.original_art %}

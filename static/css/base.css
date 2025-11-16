@@ -33,6 +33,11 @@ body {
     text-transform: uppercase;
 }
 
+a.category-badge > span.badge:hover {
+    background: black!important;
+    color: #fff !important;
+}
+
 .backgroundlayer {
 	height: 100%;
 	width: 100%;
