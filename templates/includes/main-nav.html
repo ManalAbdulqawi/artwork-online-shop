@@ -5,43 +5,43 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
 
         <li class="nav-item dropdown me-5">
-            <a class="fs-5 fw-bold nav-link text-black mr-5" href="#" id="clothing-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="fs-5 fw-bold nav-link text-black mr-5" href="#" id="blankets-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Home &amp; Living
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Duvet Cover</a>
-                <a href="" class="dropdown-item">Blanket Comforter</a>
-                <a href="" class="dropdown-item">Crushed Velvet Blanket</a>
-                <a href="" class="dropdown-item">All Home &amp; Living</a>
+            <div class="dropdown-menu border-0" aria-labelledby="blankets-link">
+                <a href="{% url 'products' %}?category=duvet_cover" class="dropdown-item">Duvet Cover</a>
+                <a href="{% url 'products' %}?category=blanket_comforter" class="dropdown-item">Blanket Comforter</a>
+                <a href="{% url 'products' %}?category=crushed_velvet_blanket" class="dropdown-item">Crushed Velvet Blanket</a>
+                <a href="{% url 'products' %}?category=duvet_cover,blanket_comforter,crushed_velvet_blanket" class="dropdown-item">All Home &amp; Living</a>
             </div>
         </li>
 
         <li class="nav-item dropdown me-5">
-            <a class="fs-5 fw-bold nav-link text-black mr-5" href="#" id="homeware-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="fs-5 fw-bold nav-link text-black mr-5" href="#" id="mugs-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Mugs
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Whit Mug</a>
-                <a href="" class="dropdown-item">Black Mug</a>
-                <a href="" class="dropdown-item">Colourful Mug</a>
-                <a href="" class="dropdown-item">All Mugs</a>
+            <div class="dropdown-menu border-0" aria-labelledby="mugs-link">
+                <a href="{% url 'products' %}?category=white_mug" class="dropdown-item">Whit Mug</a>
+                <a href="{% url 'products' %}?category=black_mug" class="dropdown-item">Black Mug</a>
+                <a href="{% url 'products' %}?category=colorful_mug" class="dropdown-item">Colourful Mug</a>
+                <a href="{% url 'products' %}?category=white_mug,black_mug,colorful_mug" class="dropdown-item">All Mugs</a>
 
             </div>
         </li>
         <li class="nav-item dropdown me-5">
-            <a class="fs-5 fw-bold nav-link text-black mr-5" href="#" id="homeware-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="fs-5 fw-bold nav-link text-black mr-5" href="#" id="journal-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Journals &amp; Notebooks
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Hardcover Journal Matt</a>
-                <a href="" class="dropdown-item">All Journals &amp; Notebooks</a>
+            <div class="dropdown-menu border-0" aria-labelledby="journal-link">
+                <a href="{% url 'products' %}?category=hardcover_journal_matt" class="dropdown-item">Hardcover Journal Matt</a>
+                <a href="{% url 'products' %}?category=hardcover_journal_matt" class="dropdown-item">All Journals &amp; Notebooks</a>
             </div>
         </li>
     </ul>

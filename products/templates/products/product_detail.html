@@ -35,12 +35,12 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <h2 class="mb-0 text-black">{{ product.name }}</h2>
-                    <p><strong>Desription:</strong> {{ product.description }}</p>
+                    <h2 class="mb-2 text-black">{{ product.name }}</h2>
+                    <p> {{ product.description }}</p>
                     <p class="lead mb-0 text-left ">Price: £{{ product.price }}</p>
                     <p class="lead mb-0 text-left ">Size: {{ product.size }}</p>
                   {% if product.original_art %}
-                  <a href="{{ product.original_art }}" Class="text-black">Original Art</a>
+                  <a href="{{ product.original_art }}" target="_blank" class="text-black">Original Art</a>
                   {% endif %}
                 </div>
             </div>
