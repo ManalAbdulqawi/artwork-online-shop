@@ -86,7 +86,7 @@
     </li>
     <!-- Shopping Bag -->
     <li>
-      <a class="{% if grand_total %}text-info fw-bold{% else %}text-black{% endif %} nav-link" href="">
+      <a class="{% if grand_total %}text-info fw-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
         <div class="d-flex flex-column align-items-center">
           <i class="fas fa-shopping-bag fa-2x mb-1"></i> <!-- Margin bottom for spacing -->
           <small class="m-0 fs-5">
