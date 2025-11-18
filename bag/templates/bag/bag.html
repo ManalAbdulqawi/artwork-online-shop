@@ -1,6 +1,8 @@
 
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
+
 
 {% block page_header %}
     <div class="container header-container">
@@ -47,10 +49,20 @@
                                         <p class="my-0">£{{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <p class="my-0">{{ item.quantity }}</p>
+                                        
+                                        <form method="POST" action="{% url 'adjust_bag' item.product.id %}" class="d-inline">
+                                          {% csrf_token %}
+                                         <button type="submit" name="quantity" value="{{ item.quantity|add:'-1' }}" class=" btn btn-outline-dark rounded-2">-</button>
+                                         <span class="mx-2">{{ item.quantity }}</span>
+                                         <button type="submit" name="quantity" value="{{ item.quantity|add:'1' }}" class="btn btn-outline-dark rounded-2">+</button>
+                                        </form>
+                                         <form method="POST" action="{% url 'remove_from_bag' item.product.id %}" class="d-inline">
+                                           {% csrf_token %}
+                                         <button type="submit" class="btn btn-sm ms-2 text-danger"> Remove <i class="fa-solid fa-trash"></i></button>
+                                         </form>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">£{{ item.product.price }}</p>
+                                        <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                                 
@@ -64,13 +76,13 @@
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-end ">
-                                    <a href="{% url 'products' %}" class="btn  btn-outline-dark rounded-2 btn-lg">
+                                    <a href="{% url 'products' %}" class="btn  btn-black rounded-2 btn-lg">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase  ">Keep Shopping</span>
                                     </a>
-                                    <a href="" class="btn btn-black rounded-2 btn-lg">
+                                    <a href="" class="btn  btn-outline-dark rounded-2 btn-lg">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
@@ -93,3 +105,4 @@
         </div>
     </div>
 {% endblock %}
+
