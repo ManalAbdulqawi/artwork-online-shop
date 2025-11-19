@@ -91,20 +91,45 @@ a.category-badge > span.badge:hover {
     border-color: white;
     color: white;
 }
-
+ 
+/* ------------------------------- bootstrap toasts */
 .message-container {
     position: fixed;
     top: 72px;
     right: 15px;
     z-index: 99999999999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* align to the right */
+    gap: 10px; /* space between toasts */
 }
-
 .custom-toast {
     overflow: visible;
 }
 
 .toast-capper {
     height: 2px;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
 }
 
 
