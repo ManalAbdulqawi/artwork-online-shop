@@ -8,6 +8,13 @@ from products.models import Product
 
 
 class Order(models.Model):
+    STATUS_CHOICES = [
+        ("PAID", "Paid"),
+        ("PROCESSING", "Processing"),
+        ("SHIPPED", "Shipped"),
+        ("DELIVERED", "Delivered"),
+        ("CANCELLED", "Cancelled"),
+    ]
     order_number = models.CharField(max_length=32, null=False, editable=False)
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
@@ -20,6 +27,9 @@ class Order(models.Model):
     county = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    status = models.CharField(
+        max_length=20, choices=STATUS_CHOICES, default="PROCESSING"
+    )
 
     def _generate_order_number(self):
         """

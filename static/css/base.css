@@ -19,9 +19,10 @@ body {
     width: 1.5rem;
 }
 .delivery{
-     background: linear-gradient(to right, #03f10b, #1434ed,rgb(225, 11, 182),rgb(159, 2, 10));
+     background: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f);
 
 }
+
 .logo {
     font-size: 2rem;
     font-weight: 900;
@@ -32,6 +33,8 @@ body {
     -webkit-text-fill-color: transparent; /* for Safari */ 
     text-transform: uppercase;
 }
+
+
 
 a.category-badge > span.badge:hover {
     background: black!important;
