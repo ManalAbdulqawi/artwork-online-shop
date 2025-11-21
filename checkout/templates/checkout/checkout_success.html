@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="backgroundlayer"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                
+                <h2 class="mt-5 mb-4 text-center text-black">THANK YOU</h2>
+                <p class="text-black text-center">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-7"></div>
+        </div>
+        <div class="row">
+			<div class="col-12 col-lg-7 text-center">
+				<a href="{% url 'products' %}" class="btn btn-black rounded-2 my-2">
+					<span class="icon mr-2">
+						<i class="fas fa-chevron-left"></i>
+					</span>
+					<span class="text-uppercase"> Go Shopping again!</span>
+				</a>
+			</div>
+		</div>
+    </div>
+{% endblock %}

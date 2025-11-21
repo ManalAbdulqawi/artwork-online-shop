@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6 bg-light rounded-2 mb-4">
-                <p class="text-black">Please fill out the form below to complete your order</p>
+                <p class="text-black p-2">Please fill out the form below to complete your order</p>
                  <form action="{% url 'checkout' %}" method="POST" id="payment-form">
     {% csrf_token %}
     <fieldset class="rounded px-3 mb-2">
