@@ -102,8 +102,12 @@
     </fieldset>
     <fieldset class="px-3">
         <legend class=" text-black px-2 w-auto"><strong>Payment</strong></legend>
+         <!-- stripe Card element here -->
         <div class="mb-3" id="card-element"></div>
+         <!-- Used to display form errors -->
         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+        <!-- Pass client secret to the view so we can get the payment intent id -->
+        <input type="hidden" value="{{ client_secret }}" name="client_secret">
     </fieldset>
     <div class="d-flex justify-content-end mt-5 mb-2">
         <a href="{% url 'view_bag' %}" class="btn btn-outline-dark rounded-2 me-2">
