@@ -19,7 +19,7 @@ body {
     width: 1.5rem;
 }
 .delivery{
-     background: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f);
+     background: black;
 
 }
 
@@ -34,6 +34,28 @@ body {
     text-transform: uppercase;
 }
 
+.loading-text {
+	place-self: center;
+	background: linear-gradient(90deg,  rgb(193, 31, 248), rgb(84, 241, 249), rgb(193, 31, 248)) -100%/ 200%;
+	/* being excessively careful with compat, 
+	 * though this has been supported unprefixed and 
+	 * in the shorthand across major browsers for a while;
+	 * but it catches the latest browser versions supported 
+	 * on Wndows XP, 7 and 8; yeah, they exist in 2025 */
+	-webkit-background-clip: text;
+	        background-clip: text;
+	/* use color, don't use -webkit-text-fill-color anymore, 
+	 * was meant to solve a problem we haven't had in years */
+	color: transparent;
+	
+	animation: shimmer 2s linear infinite
+}
+
+@keyframes shimmer { to { background-position: 100% } }
+
+/* avoid problems in high contrast mode */
+
+
 
 
 a.category-badge > span.badge:hover {
@@ -42,6 +64,27 @@ a.category-badge > span.badge:hover {
 }
 
 
+/* Styles for the separator container */
+.separator {
+  border: none; /* reset default hr styling if needed */
+}
+
+.separator--line {
+  border: none;
+  border-bottom: 5px solid black; /* your separator style */
+  width: 0;
+  height: 0; /* optional, to ensure no height issues */
+  animation: separator-width 1s ease-out forwards;
+}
+/* Keyframes for the width animation */
+@keyframes separator-width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
 
 .backgroundlayer {
 	height: 100%;
