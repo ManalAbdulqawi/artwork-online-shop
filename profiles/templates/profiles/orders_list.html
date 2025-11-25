@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="backgroundlayer"></div>
+    <div class="container">
+        <div class="row text-center mt-4">
+            <div class="col">
+                
+                <h2 class="text-uppercase text-black mt-5 mb-4">My Order History</h2>    
+            </div>
+        </div>
+         <div class="row  mx-auto">
+            <div class="col">
+                <div class="order-history table-responsive">
+                <table class="table table-sm table-light table-hover">
+                        <thead>
+                            <tr class="bg-secondary-subtle">
+                                <th>Order Number</th>
+                                <th>Date</th>
+                                <th>Deliver to</th>
+                                <th>Items</th>
+                                <th>OrderTotal</th>
+                                <th>Status</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for order in orders %}
+                                <tr>
+                                    <td>
+                                        <a href="{% url 'order_history' order.order_number %}"
+                                        title="{{ order.order_number }}">
+                                            {{ order.order_number|truncatechars:10 }}
+                                        </a>
+                                    </td>
+                                    <td>{{ order.date }}</td>
+                                    <td>{{ order.full_name }}</td>
+                                    <td>
+                                        <ul class="list-unstyled">
+                                            {% for item in order.lineitems.all %}
+                                                <li class="small">
+                                                    {{ item.product.name }} x{{ item.quantity }}
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                    <td>£{{ order.order_total }}</td>
+                                    <td class="text-success">{{ order.status }}</td>
+
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    </div>
+            </div>
+        </div>
+    </div>     
+{% endblock %}

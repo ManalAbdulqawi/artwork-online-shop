@@ -20,12 +20,13 @@ class UserProfileForm(forms.ModelForm):
         self.fields['default_country'].widget.attrs['style'] = 'background-color: #eee;'
 
         placeholders = {
+            'default_full_name': 'Full Name',
             'default_phone_number': 'Phone Number',
             'default_country': 'UK',
-            'default_postcode': 'Postal Code',
-            'default_town_or_city': 'Town or City',
             'default_street_address1': 'Street Address 1',
             'default_street_address2': 'Street Address 2',
+            'default_town_or_city': 'Town or City',
+            'default_postcode': 'Postal Code',
             'default_county': 'County',
         }
 
