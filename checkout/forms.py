@@ -18,13 +18,9 @@ class OrderForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         # Set the initial value for 'country'
         self.fields['country'].initial = 'UK'
-        # Make the field read-only and style it
+        # Make 'country' readonly
         self.fields['country'].widget.attrs['readonly'] = True
         self.fields['country'].widget.attrs['style'] = 'background-color: #eee;'
-        # Make sure it's disabled so user can't change it
-        self.fields['country'].widget.attrs['disabled'] = True
-        # Replace widget with HiddenInput to submit the value
-        self.fields['country'].widget = forms.HiddenInput()
         placeholders = {
             'full_name': 'Full Name',
             'email': 'Email Address',
