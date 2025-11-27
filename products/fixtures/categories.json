@@ -1,0 +1,56 @@
+[{
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+      "name": "hardcover_journal_matt",
+      "friendly_name": "Hardcover Journal Matt"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+      "name": "black_mug",
+      "friendly_name": "Black Mug"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+      "name": "white_mug",
+      "friendly_name": "White Mug"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+      "name": "colorful_mug",
+      "friendly_name": "Colorful Mug"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 5,
+    "fields": {
+      "name": "crushed_velvet_blanket",
+      "friendly_name": "Crushed Velvet Blanket"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 6,
+    "fields": {
+      "name": "blanket_comforter",
+      "friendly_name": "Blanket Comforter"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 7,
+    "fields": {
+      "name": "duvet_cover",
+      "friendly_name": "Duvet Cover"
+    }
+  }]

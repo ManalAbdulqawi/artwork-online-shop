@@ -1,0 +1,205 @@
+ [{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Ship Captain Hardcover Journal Matt",
+      "description": "Full wraparound print \r\n150 lined pages (75 sheets) \r\nMatte finish \r\nCasewrap binding \r\nNote: 0.5\"x0.5\" production barcode visible on the back cover",
+      "price": "40.00",
+      "size": "Journal",
+      "original_art": "https://artwork-9d8087583ca3.herokuapp.com/ship-captain-character-design/"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "name": "The Last Witness Hardcover Journal Matt",
+      "description": "Full wraparound print \r\n\r\n150 lined pages (75 sheets) \r\n\r\nMatte finish \r\n\r\nCasewrap binding \r\n\r\nNote: 0.5\"x0.5\" production barcode visible on the back cover",
+      "price": "40.00",
+      "size": "Journal",
+      "original_art": "https://artwork-9d8087583ca3.herokuapp.com/the-last-witness/"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "category": 1,
+      "name": "The Shy Girl Hardcover Journal Matt",
+      "description": "Full wraparound print \r\n\r\n150 lined pages (75 sheets) \r\n\r\nMatte finish \r\n\r\nCasewrap binding \r\n\r\nNote: 0.5\"x0.5\" production barcode visible on the back cover",
+      "price": "40.00",
+      "size": "Journal",
+      "original_art": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "category": 1,
+      "name": "Sunset Resolve Hardcover Journal Matt",
+      "description": "Full wraparound print \r\n\r\n150 lined pages (75 sheets) \r\n\r\nMatte finish \r\n\r\nCasewrap binding \r\n\r\nNote: 0.5\"x0.5\" production barcode visible on the back cover",
+      "price": "40.00",
+      "size": "Journal",
+      "original_art": "https://artwork-9d8087583ca3.herokuapp.com/sunset-resolve/"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "category": 1,
+      "name": "Into The Deep Hardcover Journal Matt",
+      "description": "Full wraparound print \r\n\r\n150 lined pages (75 sheets) \r\n\r\nMatte finish \r\n\r\nCasewrap binding \r\n\r\nNote: 0.5\"x0.5\" production barcode visible on the back cover",
+      "price": "40.00",
+      "size": "Journal",
+      "original_art": "https://artwork-9d8087583ca3.herokuapp.com/into-the-deep/"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "category": 1,
+      "name": "Winter Encounter Hardcover Journal Matt",
+      "description": "Full wraparound print \r\n\r\n150 lined pages (75 sheets) \r\n\r\nMatte finish \r\n\r\nCasewrap binding \r\n\r\nNote: 0.5\"x0.5\" production barcode visible on the back cover",
+      "price": "40.00",
+      "size": "Journal",
+      "original_art": "https://artwork-9d8087583ca3.herokuapp.com/winter-encounte/"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "category": 1,
+      "name": "The Lady of Thrones and Steel Hardcover Journal Matt",
+      "description": "Full wraparound print \r\n\r\n150 lined pages (75 sheets) \r\n\r\nMatte finish \r\n\r\nCasewrap binding \r\n\r\nNote: 0.5\"x0.5\" production barcode visible on the back cover",
+      "price": "40.00",
+      "size": "Journal",
+      "original_art": "https://artwork-9d8087583ca3.herokuapp.com/the-lady-of-thrones-and-steel/"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "category": 2,
+      "name": "The Black Warden Black Mug",
+      "description": "Material: 100% ceramic with a glossy finish \r\n\r\nC-shaped easy-grip handle \r\n\r\nMicrowave and dishwasher safe \r\n\r\nLead and BPA-free",
+      "price": "30.00",
+      "size": "size: 11oz",
+      "original_art": "https://artwork-9d8087583ca3.herokuapp.com/the-black-warden/"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "category": 2,
+      "name": "Fantasy Knight Black Mug",
+      "description": "Material: 100% ceramic with a glossy finish \r\n\r\nC-shaped easy-grip handle \r\n\r\nMicrowave and dishwasher safe \r\n\r\nLead and BPA-free",
+      "price": "30.00",
+      "size": "size: 11oz",
+      "original_art": "https://artwork-9d8087583ca3.herokuapp.com/fantasy-knight-character-design/"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+      "category": 4,
+      "name": "Beside the Water Colorful Mug",
+      "description": "Material: 100% ceramic with a glossy finish \r\n\r\nC-shaped easy-grip handle \r\n\r\nMicrowave and dishwasher safe \r\n\r\nLead and BPA-free",
+      "price": "30.00",
+      "size": "11oz",
+      "original_art": "https://artwork-9d8087583ca3.herokuapp.com/beside-the-wate/"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+      "category": 3,
+      "name": "The Shy Girl White Mug",
+      "description": "Material: 100% ceramic with a glossy finish \r\n\r\nC-shaped easy-grip handle \r\n\r\nMicrowave and dishwasher safe \r\n\r\nLead and BPA-free",
+      "price": "30.00",
+      "size": "11oz",
+      "original_art": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+      "category": 5,
+      "name": "Autumn Path Crushed Velvet Blanket",
+      "description": "100% polyester \r\n\r\nThickness: 0.20'' (5mm) \r\n\r\nOne-sided print \r\n\r\nHemmed edges \r\n\r\nShiny finish",
+      "price": "100.00",
+      "size": "width 127cm Î  lenght 152.4cm",
+      "original_art": "https://artwork-9d8087583ca3.herokuapp.com/autumn-path/"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+      "category": 5,
+      "name": "Colorful Sea Flower Crushed Velvet Blanket",
+      "description": "100% polyester \r\n\r\nThickness: 0.20'' (5mm) \r\n\r\nOne-sided print \r\n\r\nHemmed edges \r\n\r\nShiny finish",
+      "price": "100.00",
+      "size": "width 127cm Î  lenght 152.4cm",
+      "original_art": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+      "category": 5,
+      "name": "The Bridge Crushed Velvet Blanket",
+      "description": "100% polyester \r\n\r\nThickness: 0.20'' (5mm) \r\n\r\nOne-sided print \r\n\r\nHemmed edges \r\n\r\nShiny finish",
+      "price": "100.00",
+      "size": "width 127cm Î  lenght 152.4cm",
+      "original_art": "https://artwork-9d8087583ca3.herokuapp.com/the-bridge/"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+      "category": 7,
+      "name": "The Bridge Duvet Cover",
+      "description": "Material: 100% Oeko-Tex certified cotton \r\n\r\nInvisible zipper closure \r\n\r\nInside corner ties to secure insert \r\n\r\nDecoration method: Direct-to-fabric, vibrant edge-to-edge print \r\n\r\nPrint area: Front side",
+      "price": "150.00",
+      "size": "King",
+      "original_art": "https://artwork-9d8087583ca3.herokuapp.com/the-bridge/"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+      "category": 7,
+      "name": "Autumn Path Duvet cover",
+      "description": "Material: 100% Oeko-Tex certified cotton \r\n\r\nInvisible zipper closure \r\n\r\nInside corner ties to secure insert \r\n\r\nDecoration method: Direct-to-fabric, vibrant edge-to-edge print \r\n\r\nPrint area: Front side",
+      "price": "150.00",
+      "size": "King",
+      "original_art": "https://artwork-9d8087583ca3.herokuapp.com/autumn-path/"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+      "category": 6,
+      "name": "The Colorful Sea Flower Comforter",
+      "description": "100% Polyester \r\n\r\nLightweight material \r\n\r\nOne-sided print \r\n\r\nSolid bright white back",
+      "price": "130.00",
+      "size": "King",
+      "original_art": null
+    }
+  }]
+  
