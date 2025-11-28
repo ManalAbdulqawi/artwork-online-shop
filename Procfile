@@ -1,1 +1,1 @@
-web: gunicorn artwork_online_shop.wsgi:application
+web: gunicorn artwork-online-shop.wsgi:application
