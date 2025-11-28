@@ -47,7 +47,7 @@ def checkout(request):
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
-            'country': request.POST['country'],
+            'country': 'UK',
             'postcode': request.POST['postcode'],
             'town_or_city': request.POST['town_or_city'],
             'street_address1': request.POST['street_address1'],
@@ -105,7 +105,7 @@ def checkout(request):
                     'full_name': profile.default_full_name,
                     'email': profile.user.email,
                     'phone_number': profile.default_phone_number,
-                    'country': profile.default_country,
+                    'country': 'UK',
                     'postcode': profile.default_postcode,
                     'town_or_city': profile.default_town_or_city,
                     'street_address1': profile.default_street_address1,
@@ -148,7 +148,7 @@ def checkout_success(request, order_number):
         if save_info:
             profile_data = {
                 'default_phone_number': order.phone_number,
-                'default_country': order.country,
+                'default_country': 'UK',
                 'default_postcode': order.postcode,
                 'default_town_or_city': order.town_or_city,
                 'default_street_address1': order.street_address1,
