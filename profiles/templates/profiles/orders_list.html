@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
+    <div class="container header-container mt-5">
         <div class="row">
             <div class="col"></div>
         </div>
@@ -22,10 +22,10 @@
                 <h2 class="text-uppercase text-black mt-5 mb-4">My Order History</h2>    
             </div>
         </div>
-         <div class="row  mx-auto">
-            <div class="col">
-                <div class="order-history table-responsive">
-                <table class="table table-sm table-light table-hover">
+         <div class="row  justify-content-center">
+            <div class="col-12 col-md-10 col-lg-10">
+                <div class="order-history">
+                <table class="table table-sm table-light table-hover responsive-table">
                         <thead>
                             <tr class="bg-secondary-subtle">
                                 <th>Order Number</th>
@@ -64,6 +64,28 @@
                             {% endfor %}
                         </tbody>
                     </table>
+
+                    <div class="stacked-orders ">
+  {% for order in orders %}
+  <div class="card mb-3">
+    <div class="card-header bg-secondary-subtle">
+      <strong>Order Number:</strong> <a href="{% url 'order_history' order.order_number %}">{{ order.order_number }}</a>
+    </div>
+    <div class="card-body">
+      <p><strong>Date:</strong> {{ order.date }}</p>
+      <p><strong>Deliver to:</strong> {{ order.full_name }}</p>
+      <p><strong>Items:</strong></p>
+      <ul>
+        {% for item in order.lineitems.all %}
+        <li>{{ item.product.name }} x{{ item.quantity }}</li>
+        {% endfor %}
+      </ul>
+      <p class="d-none"><strong>Total:</strong> £{{ order.order_total }}</p>
+      <p class="text-success"><strong>Status:</strong> {{ order.status }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
                     </div>
             </div>
         </div>

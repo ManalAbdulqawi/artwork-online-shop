@@ -14,17 +14,20 @@
 
 {% block content %}
     <div class="backgroundlayer"></div>
-    <div class="container mb-2">
+    <div class="container mb-2 mt-5">
         <div class="row">
             <div class="col">
-                <h2 class=" text-black mb-5 mt-5 text-center">SHOPPING BAG</h2>
+                <br/>
+                <h2 class=" text-black mb-4 mt-4 text-center">SHOPPING BAG</h2>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-lg-10  my-auto py-1 py-lg-0 text-center">
                 {% if bag_items %}
-                    <div class="table-responsive">
+                <!-- Card layout for small screens -->
+
+                    <div class="table-responsive  d-none d-md-block">
                     <table class="table table-sm  mb-5">
                             <thead class="text-black">
                                 <tr>
@@ -71,6 +74,41 @@
                             
                         </table>
                     </div>
+
+                    <!-- Cards for small screens -->
+                   <div class="d-block d-md-none">
+                       {% for item in bag_items %}
+                          <div class="card mb-3">
+                           <div class="card-body">
+                            <div class="row align-items-center">
+                              <div class="col-12">
+                                 <img src="{{ item.product.first_image.image.url }}" class="img-fluid rounded">
+                               </div>
+                                  <div class="col-12">
+                                     <h5 class="card-title mb-2">{{ item.product.name }}</h5>
+                                       <p class="mb-1">Size: {{ item.product.size }}</p>
+                                         <p class="mb-1">Price: £{{ item.product.price }}</p>
+                                           <p class="mb-2">Quantity: {{ item.quantity }}</p>
+          
+                                            <!-- Quantity controls -->
+                                             <form method="POST" action="{% url 'adjust_bag' item.product.id %}" class="d-inline">
+                                             {% csrf_token %}
+                                              <button type="submit" name="quantity" value="{{ item.quantity|add:'-1' }}" class="btn btn-outline-dark btn-sm">-</button>
+                                               <span class="mx-2">{{ item.quantity }}</span>
+                                              <button type="submit" name="quantity" value="{{ item.quantity|add:'1' }}" class="btn btn-outline-dark btn-sm">+</button>
+                                              </form>
+          
+                                              <!-- Remove button -->
+                                             <form method="POST" action="{% url 'remove_from_bag' item.product.id %}" class="d-inline ms-2">
+                                             {% csrf_token %}
+                                             <button type="submit" class="btn btn-sm btn-danger mt-2">Remove <i class="fa-solid fa-trash"></i></button>
+                                             </form>
+                                        </div>
+                                   </div>
+                              </div>
+                           </div>
+                        {% endfor %}
+                   </div>
 
                     <div  class="col-12 col-lg-10  my-auto py-1 py-lg-0 text-center text-lg-end mb-5">
                                     <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>

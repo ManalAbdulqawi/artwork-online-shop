@@ -239,6 +239,7 @@ a.category-badge > span.badge:hover {
     color: #a2a9b1;
 }
 
+
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
 	/* btn */
@@ -305,4 +306,34 @@ a.category-badge > span.badge:hover {
     body {
         height: calc(100vh - 116px);
     }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
+    }
+}
+
+@media(max-width: 576px){
+  .responsive-table {
+    display: none;
+  }
+  .stacked-orders {
+    display: block;
+  }
+}
+@media(min-width: 577px){
+  .responsive-table {
+    display: block;
+  }
+  .stacked-orders {
+    display: none;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .custom-toast {
+    width: 90%;      /* or 100% to fill the screen */
+    max-width: 320px; /* do not exceed 320px */
+    margin: 0 auto;   /* center it */
+  }
 }

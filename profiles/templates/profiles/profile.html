@@ -14,24 +14,26 @@
 {% endblock %}
 
 {% block content %}
-    <div class="backgroundlayer"></div>
+<div class="backgroundlayer"></div>
     <div class="container">
         <div class="row text-center mt-4">
-            <div class="col">
+            <div class="col mt-5">
                 
                 <h2 class="text-uppercase text-black mt-5 mb-4">My Profile</h2>
                 
             </div>
         </div>
-         <div class="row mx-auto w-50">
-            <div class="col bg-light rounded-2 p-4">
-                <p class="text-black">Default Delivery Information</p>
-                <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
-                    {% csrf_token %}
-                    {{ form|crispy }}
-                    <button class="btn btn-black rounded-2 text-uppercase float-end">Update Information</button>
-                </form>
-            </div>
-          
+         <div class="row justify-content-center">
+  <!-- Use col-12 for small screens, col-md-8 for medium, col-lg-6 for large -->
+      <div class="col-12 col-md-8 col-lg-6 bg-light rounded-2 p-4">
+    <p class="text-black">Default Delivery Information</p>
+    <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <button class="btn btn-black rounded-2 text-uppercase float-end">Update Information</button>
+    </form>
+    </div>
+    </div>
     </div>     
+    
 {% endblock %}
