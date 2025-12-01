@@ -49,6 +49,7 @@
                      {% if product.original_art %}
                      <a href="{{ product.original_art }}" target="_blank" class="text-black">Original Art</a>
                       {% endif %}
+
                     <form class="form mb-3" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
@@ -89,6 +90,22 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
+                    {% if user.is_authenticated %}
+                     {% if product.id in user_watched_products %}
+                        <!-- Remove from watchlist -->
+                        <form method="post" action="{% url 'remove_from_watchlist' product.id %}">
+                         {% csrf_token %}
+                           <button class="btn btn-black"><i class="fa-solid fa-trash"></i>Remove from Watchlist</button>
+                        </form>
+                      {% else %}
+                         <!-- Add to watchlist -->
+                         <form method="post" action="{% url 'add_to_watchlist' product.id %}">
+                            {% csrf_token %}
+                              
+                               <button class="mt-2 btn btn-black"> <i class="fas fa-heart"></i> Add to Watchlist</button>
+                         </form>
+                    {% endif %}
+                {% endif %}
                 </div>
             </div>
         </div>
