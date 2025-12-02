@@ -1,8 +1,12 @@
-
+<li class="list-inline-item"></li>
+<a href="{% url 'home' %}" class="nav-link main-logo-link">
+          <h2 class="logo my-0">Artwork Shop</h2>
+        </a>
+</li>        
 
 <li class="list-inline-item dropdown">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <div class="text-center">
+        <div class="text-center mobileiconsize">
             <div><i class="fas fa-user fa-lg"></i></div>
             <p class="my-0">My Account</p>
         </div>
@@ -22,7 +26,7 @@
 
 <li class="list-inline-item">
     <a class="{% if total %}text-primary fw-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
-        <div class="text-center">
+        <div class="text-center mobileiconsize">
             <div> <i class="fas fa-cart-shopping fa-lg"></i></div>
             <p class="my-0">
                 {% if total %}
