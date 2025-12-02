@@ -53,11 +53,12 @@
       </div>
     </div>
     <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-      <div class="col-12 col-lg-4  my-auto py-1 py-lg-0 text-center text-lg-left">
-        <a href="{% url 'home' %}" class="nav-link main-logo-link">
-          <h2 class="logo my-0">Artwork Shop</h2>
-        </a>
-      </div>
+     <!-- Desktop logo: visible only on medium and larger screens -->
+      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left d-none d-md-block">
+         <a href="{% url 'home' %}" class="nav-link main-logo-link">
+           <h2 class="logo my-0">Artwork Shop</h2>
+         </a>
+     </div>
      
       <div class="col-12 col-lg-8 my-auto py-1 py-lg-0">
   <ul class="d-flex justify-content-end align-items-center mb-0 gap-5 list-unstyled">

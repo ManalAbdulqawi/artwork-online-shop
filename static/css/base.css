@@ -324,12 +324,13 @@ a.category-badge > span.badge:hover {
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
-    .logo, .mobileiconsize{
-      font-size: 0.8rem;
-    }
+   
 }
 
 @media(max-width: 576px){
+  .logo, .mobileiconsize{
+      font-size: 0.8rem;
+    }
   .responsive-table {
     display: none;
   }

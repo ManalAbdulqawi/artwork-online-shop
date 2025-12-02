@@ -16,14 +16,10 @@ class OrderForm(forms.ModelForm):
         labels and set autofocus on first field
         """
         super().__init__(*args, **kwargs)
-        # Set the initial value for 'country'
-        self.fields['country'].initial = 'UK'
-        # Make 'country' readonly
-        self.fields['country'].widget.attrs['readonly'] = True
-         # Make sure it's disabled so user can't change it
-        self.fields['country'].widget.attrs['disabled'] = True
-        # Replace widget with HiddenInput to submit the value
-        self.fields['country'].widget = forms.HiddenInput()
+        self.fields['country'].initial = 'UK' # Set the initial value for 'country'
+        self.fields['country'].widget.attrs['readonly'] = True # Make 'country' readonly
+        self.fields['country'].widget.attrs['disabled'] = True # Make sure it's disabled so user can't change it
+        self.fields['country'].widget = forms.HiddenInput() # Replace widget with HiddenInput to submit the value
         placeholders = {
             'full_name': 'Full Name',
             'email': 'Email Address',
