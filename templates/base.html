@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is ArtWork Shop Web Application" />
     {% endblock %}
 
     {% block extra_meta %}
@@ -16,6 +17,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin&display=swap">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- Tab icon -->
+    <link rel="icon" href=" mrdia/art_icon.png" />
+
     {% endblock %}
 
     {% block extra_css %}
@@ -168,24 +172,24 @@
   {% endblock %}
  
   <!-- Footer -->
-  <footer class="footer mt-4 dark-bg text-center text-white">
+<footer class="footer mt-4 dark-bg text-center text-white ">
     <div class="row separator">
     <div class="separator--line border border-bottom-5 border-white"></div>
     </div>
-     <div class="container-fluid text-center justify-content-center">
-    <div class="row row-cols-3 g-1 py-2 px-lg-5 px-sm-0 justify-content-center ">
+    <div class="container-fluid text-center justify-content-center d-flex flex-column mt-2">
+    <div class="row row-cols-1 row-cols-md-3 g-1 py-2 px-lg-5 px-sm-0 justify-content-center ">
     <!-- Left side: Contact Us -->
-    <div class="column">
+    <div class="col mb-3">
       <h3>For Enquiries</h3>
       <a href="{% url 'enquiry' %}" class="footer-link mb-2">Fill out this form</a>
     
     </div>
-    <div class="column ">
+    <div class="col mb-3">
         <h3>Artwork Shop</h3>
          <p>Turning <a  href="https://artwork-9d8087583ca3.herokuapp.com/artist/2/artworks/" target="_blank" class="footer-link" >Mareh's Artwork </a> into everyday goodies to add a splash of inspiration to your life.</p>
     </div>
     <!-- Right side: About Art Work -->
-    <div class="column">
+    <div class="col mb-3">
       <h3 >Developed By</h3>
       <a href="https://manalwebsite2025.netlify.app/" target="_blank" class="footer-link">Manal Abdulqawi</a>
     </div>
