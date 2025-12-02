@@ -13,7 +13,6 @@
             </div>
         </div>
         {% if total and not on_profile_page %}
-         {% if not on_watchlist_page %}
             <p class="bg-white text-black py-1">Your Bag ({{ product_count }})</p>
             <div class="bag-notification-wrapper">
                 {% for item in bag_items %}
@@ -48,7 +47,7 @@
                 </div>
             </div>
         {% endif %}
-        {% endif %}
+
 
     </div>
 </div>

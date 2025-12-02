@@ -166,5 +166,34 @@
 </script>
 
   {% endblock %}
+ 
+  <!-- Footer -->
+  <footer class="footer mt-4 dark-bg text-center text-white">
+    <div class="row separator">
+    <div class="separator--line border border-bottom-5 border-white"></div>
+    </div>
+     <div class="container-fluid text-center justify-content-center">
+    <div class="row row-cols-3 g-1 py-2 px-lg-5 px-sm-0 justify-content-center ">
+    <!-- Left side: Contact Us -->
+    <div class="column">
+      <h3>For Enquiries</h3>
+      <a href="{% url 'enquiry' %}" class="footer-link mb-2">Fill out this form</a>
+    
+    </div>
+    <div class="column ">
+        <h3>Artwork Shop</h3>
+         <p>Turning <a  href="https://artwork-9d8087583ca3.herokuapp.com/artist/2/artworks/" target="_blank" class="footer-link" >Mareh's Artwork </a> into everyday goodies to add a splash of inspiration to your life.</p>
+    </div>
+    <!-- Right side: About Art Work -->
+    <div class="column">
+      <h3 >Developed By</h3>
+      <a href="https://manalwebsite2025.netlify.app/" target="_blank" class="footer-link">Manal Abdulqawi</a>
+    </div>
+  </div>
+  </div>
+   <div class="text-center copywrite">
+                <p>&copy; 2025 Artwork Shop. All rights reserved.</p>
+            </div>
+</footer>
   </body>
 </html>

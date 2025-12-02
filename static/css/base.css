@@ -8,6 +8,7 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Cabin';
+    overflow-x: hidden;
 }
 
 /* from Bulma */
@@ -163,7 +164,9 @@ a.category-badge > span.badge:hover {
     overflow-y: auto;
 }
 
-
+.dark-bg {
+    background-color: #1a1918;
+}
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 
@@ -199,6 +202,17 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
     text-decoration: none;
 
+}
+
+.footer-link {
+  color: #fff !important;
+  text-decoration: none ;
+  transition: all 0.3s ease !important;;
+}
+
+.footer-link:hover {
+  transform: scale(1);
+  color: #49fdf7 !important;;
 }
 
 /* -------------------------------- Media Queries */

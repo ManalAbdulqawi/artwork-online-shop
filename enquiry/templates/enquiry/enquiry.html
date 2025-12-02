@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
+<div class="backgroundlayer"></div>
+    <div class="container">
+        <div class="row text-center mt-4">
+            <div class="col mt-5">
+                
+                <h2 class=" text-uppercase text-black mt-5 mb-4">Fill Enquiry Form</h2>
+                
+            </div>
+        </div>
+         <div class="row justify-content-center">
+  <!-- Use col-12 for small screens, col-md-8 for medium, col-lg-6 for large -->
+      <div class="col-12 col-md-8 col-lg-6 bg-light rounded-2 p-4">
+
+      <form method="post">
+                {{ enquiry_form | crispy }}
+                {% csrf_token %}
+      <button class="btn btn-black rounded-2 float-end">Submit Enquiry</button>
+    </form>
+    </div>
+    </div>
+    </div>     
+    
+{% endblock %}
