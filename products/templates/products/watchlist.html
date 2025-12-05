@@ -13,11 +13,11 @@
 <div class="container mt-5 d-flex flex-column align-items-center"></div>
         <div class="row">
             <div class="col">
-                 <div class="backgroundlayer"></div>
+                 <div class="backgroundlayer "></div>
 <br/>
 <h2 class="text-black text-center mt-5">My Watchlist</h2>
 {% if watchlist_items %}
-        <div class="row justify-content-center m-5">
+        <div class="row justify-content-center vh-100  m-5">
             {% for item in watchlist_items %}
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-2">
                 <div class="card  h-100 border-1 border-black">
@@ -40,7 +40,7 @@
             {% endfor %}
         </div>
     {% else %}
-        <p class="mt-4 text-black text-center">Your watchlist is empty.</p>
+        <p class="mt-4 text-black text-center vh-100">Your watchlist is empty.</p>
     {% endif %}
 </div>
 {% endblock %}
