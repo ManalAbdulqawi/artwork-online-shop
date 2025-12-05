@@ -67,9 +67,9 @@ def checkout(request):
                 try:
                     product = Product.objects.get(id=item_id)
                     order_line_item = OrderLineItem(
-                        order = order,
-                        product = product,
-                        quantity = quantity,
+                        order=order,
+                        product=product,
+                        quantity=quantity,
                         )
                     order_line_item.save()
                 except Product.DoesNotExist:

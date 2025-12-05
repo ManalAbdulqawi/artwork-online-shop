@@ -5,9 +5,8 @@ from django.db.models.functions import Lower
 from .models import Product, Category, Watchlist
 from django.contrib.auth.decorators import login_required
 
-
-
 # Create your views here.
+
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
@@ -17,7 +16,6 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
-
     if request.GET:
 
         if 'sort' in request.GET:
@@ -54,9 +52,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-
     }
-
     return render(request, 'products/products.html', context)
 
 
@@ -75,9 +71,7 @@ def product_detail(request, product_id):
         'images': images,
         'images_count': images_count,
         'user_watched_products': list(user_watched_products),
-
     }
-
     return render(request, 'products/product_detail.html', context)
 
 
@@ -85,7 +79,6 @@ def product_detail(request, product_id):
 def watchlist_view(request):
     watchlist_items = request.user.watchlist.select_related('product')
     return render(request, 'products/watchlist.html', {'watchlist_items': watchlist_items})
-
 
 
 @login_required
@@ -104,4 +97,4 @@ def remove_from_watchlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     Watchlist.objects.filter(user=request.user, product=product).delete()
     messages.success(request, 'Product removed from your watchlist.')
-    return redirect('watchlist')
+    return redirect('watchlist') 

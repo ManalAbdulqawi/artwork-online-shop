@@ -21,7 +21,7 @@ class OrderAdmin(admin.ModelAdmin):
                        'stripe_pid',)
 
     list_display = ('order_number', 'date', 'full_name',
-                    'order_total', 'status',)    
+                    'order_total', 'status',)      
     search_fields = ('user__username', 'status')
     list_editable = ('status',)
     ordering = ('-date',)

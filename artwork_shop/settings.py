@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 import dj_database_url
 
+if os.path.isfile('env.py'):
+    import env
+
 
 from pathlib import Path
 
@@ -191,7 +194,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 if 'USE_AWS' in os.environ:
     # Cache control
