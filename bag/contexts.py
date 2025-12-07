@@ -17,7 +17,7 @@ def bag_contents(request):
             'item_id': item_id,
             'quantity': quantity,
             'product': product,
-        }) 
+        })  
     context = {
         'bag_items': bag_items,
         'total': total,

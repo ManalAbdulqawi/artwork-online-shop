@@ -6,4 +6,5 @@ from .models import EnquiryRequest
 @admin.register(EnquiryRequest)
 class EnquiryRequestAdmin(admin.ModelAdmin):
 
-    list_display = ('subject','message', 'read',) 
+    list_display = ('subject', 'message', 'read',)
+     

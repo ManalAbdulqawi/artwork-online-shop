@@ -16,10 +16,10 @@ class OrderForm(forms.ModelForm):
         labels and set autofocus on first field
         """
         super().__init__(*args, **kwargs)
-        self.fields['country'].initial = 'UK'  # Set the initial value
-        self.fields['country'].widget.attrs['readonly'] = True  # Make 'country' readonly
-        self.fields['country'].widget.attrs['disabled'] = True  # Make sure it's disabled so user can't change it
-        self.fields['country'].widget = forms.HiddenInput()  # Replace widget with HiddenInput to submit the value
+        self.fields['country'].initial = 'UK'
+        self.fields['country'].widget.attrs['readonly'] = True
+        self.fields['country'].widget.attrs['disabled'] = True
+        self.fields['country'].widget = forms.HiddenInput()
         placeholders = {
             'full_name': 'Full Name',
             'email': 'Email Address',
@@ -40,5 +40,5 @@ class OrderForm(forms.ModelForm):
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
-            self.fields[field].label = False 
+            self.fields[field].label = False                  
             

@@ -8,24 +8,20 @@ from checkout.models import Order
 
 
 def profile(request):
-    """ Display the user's profile. """
+    """Display the user's profile."""
     profile = get_object_or_404(UserProfile, user=request.user)
 
-    if request.method == 'POST':
+    if request.method == "POST":
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Profile updated successfully')
+            messages.success(request, "Profile updated successfully")
 
     form = UserProfileForm(instance=profile)
 
-    template = 'profiles/profile.html'
-    context = {
-        'form': form,
-        'on_profile_page': True
+    template = "profiles/profile.html"
+    context = {"form": form, "on_profile_page": True}
 
-    }
-    
     return render(request, template, context)
 
 
@@ -33,26 +29,28 @@ def orders_list(request):
     profile = get_object_or_404(UserProfile, user=request.user)
     orders = profile.orders.all()
 
-    template = 'profiles/orders_list.html'
+    template = "profiles/orders_list.html"
     context = {
-        'orders': orders,
-
-    }    
+        "orders": orders,
+    }
     return render(request, template, context)
 
 
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
-    messages.info(request, (
-        f'This is a past confirmation for order number {order_number}. '
-        'A confirmation email was sent on the order date.'
-    ))
+    messages.info(
+        request,
+        (
+            f"This is a past confirmation for order number {order_number}. "
+            "A confirmation email was sent on the order date."
+        ),
+    )
 
-    template = 'checkout/checkout_success.html'
+    template = "checkout/checkout_success.html"
     context = {
-        'order': order,
-        'from_profile': True,
+        "order": order,
+        "from_profile": True,
     }
 
     return render(request, template, context)
