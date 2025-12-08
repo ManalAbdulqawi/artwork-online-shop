@@ -84,6 +84,8 @@ def product_detail(request, product_id):
 
 @login_required
 def watchlist_view(request):
+    """Display all products of the user's watchlist"""
+
     watchlist_items = request.user.watchlist.select_related("product")
     return render(
         request, "products/watchlist.html", {"watchlist_items": watchlist_items}
@@ -92,8 +94,10 @@ def watchlist_view(request):
 
 @login_required
 def add_to_watchlist(request, product_id):
+    """add product to user's watchlist"""
+
     product = get_object_or_404(Product, id=product_id)
-    watchlist_item, created = Watchlist.objects.get_or_create(
+    created = Watchlist.objects.get_or_create(
         user=request.user, product=product
     )
     if created:
@@ -105,6 +109,8 @@ def add_to_watchlist(request, product_id):
 
 @login_required
 def remove_from_watchlist(request, product_id):
+    """Delete a product from the user's watchlist"""
+
     product = get_object_or_404(Product, id=product_id)
     Watchlist.objects.filter(user=request.user, product=product).delete()
     messages.success(request, "Product removed from your watchlist.")

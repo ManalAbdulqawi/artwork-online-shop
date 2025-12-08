@@ -26,6 +26,7 @@ def profile(request):
 
 
 def orders_list(request):
+    """Display the user's orders list."""
     profile = get_object_or_404(UserProfile, user=request.user)
     orders = profile.orders.all()
 
@@ -37,6 +38,7 @@ def orders_list(request):
 
 
 def order_history(request, order_number):
+    """Display the user's specific order details"""
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(

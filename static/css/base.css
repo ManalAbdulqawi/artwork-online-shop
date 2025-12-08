@@ -329,11 +329,11 @@ a.category-badge > span.badge:hover {
 
 @media(max-width: 576px){
   .logo{
-      font-size: 0.8rem;
+      font-size: 0.7rem;
     }
 
   .mobileiconsize{
-      font-size: 0.7rem;
+      font-size: 0.6rem;
     }
   .responsive-table {
     display: none;
@@ -358,4 +358,5 @@ a.category-badge > span.badge:hover {
     max-width: 320px; /* do not exceed 320px */
     margin: 0 auto;   /* center it */
   }
+  
 }
