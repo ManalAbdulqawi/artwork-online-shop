@@ -7,4 +7,3 @@ from .models import EnquiryRequest
 class EnquiryRequestAdmin(admin.ModelAdmin):
 
     list_display = ('subject', 'message', 'read',)
-     

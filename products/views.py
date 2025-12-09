@@ -41,7 +41,8 @@ def all_products(request):
         if "q" in request.GET:
             query = request.GET["q"]
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request,
+                               "You didn't enter any search criteria!")
                 return redirect(reverse("products"))
 
             queries = (
@@ -88,7 +89,8 @@ def watchlist_view(request):
 
     watchlist_items = request.user.watchlist.select_related("product")
     return render(
-        request, "products/watchlist.html", {"watchlist_items": watchlist_items}
+        request,
+        "products/watchlist.html", {"watchlist_items": watchlist_items}
     )
 
 

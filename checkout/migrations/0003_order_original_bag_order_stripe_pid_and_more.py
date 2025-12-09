@@ -13,16 +13,32 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='order',
             name='original_bag',
-            field=models.TextField(default=''),
+            field=models.TextField(
+                default=''),
         ),
         migrations.AddField(
             model_name='order',
             name='stripe_pid',
-            field=models.CharField(default='', max_length=254),
+            field=models.CharField(
+                default='',
+                max_length=254),
         ),
         migrations.AlterField(
             model_name='order',
             name='status',
-            field=models.CharField(choices=[('PAID', 'Paid'), ('PROCESSING', 'Processing'), ('SHIPPED', 'Shipped'), ('DELIVERED', 'Delivered'), ('CANCELLED', 'Cancelled')], default='PROCESSING', max_length=20),
+            field=models.CharField(
+                choices=[
+                    ('PAID',
+                     'Paid'),
+                    ('PROCESSING',
+                     'Processing'),
+                    ('SHIPPED',
+                     'Shipped'),
+                    ('DELIVERED',
+                     'Delivered'),
+                    ('CANCELLED',
+                     'Cancelled')],
+                default='PROCESSING',
+                max_length=20),
         ),
     ]

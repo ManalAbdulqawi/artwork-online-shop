@@ -14,7 +14,8 @@ def enquiry_us(request):
             messages.add_message(
                 request,
                 messages.SUCCESS,
-                "Your Enquiry request received! I endeavour to respond within 2 working days.",
+                "Your Enquiry request received! I endeavour"
+                " to respond within 2 working days.",
             )
 
     enquiry_form = EnquiryRequestForm()

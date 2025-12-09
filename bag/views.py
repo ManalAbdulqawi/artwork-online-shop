@@ -21,7 +21,10 @@ def add_to_bag(request, item_id):
 
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
-        messages.success(request, f"Updated {product.name} quantity to {bag[item_id]}")
+        messages.success(
+            request, f"Updated {
+                product.name} quantity to {
+                bag[item_id]}")
 
     else:
         bag[item_id] = quantity
@@ -40,7 +43,10 @@ def adjust_bag(request, item_id):
     new_quantity = max(1, min(99, current_quantity))  # Enforce min/max limits
     if new_quantity > 0:
         bag[item_id] = new_quantity
-        messages.success(request, f"Updated {product.name} quantity to {bag[item_id]}")
+        messages.success(
+            request, f"Updated {
+                product.name} quantity to {
+                bag[item_id]}")
     else:
         bag.pop(item_id, None)
         messages.success(request, f"Removed {product.name} from your bag")

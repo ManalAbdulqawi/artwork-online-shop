@@ -28,11 +28,10 @@ class ImageAdmin(admin.ModelAdmin):
     list_display = (
         'product',
         'name',
-        'image',        
+        'image',
     )
 
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Image, ImageAdmin)
-

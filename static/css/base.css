@@ -38,7 +38,8 @@ body {
 .loading-text {
 	place-self: center;
 	background: linear-gradient(90deg,  rgb(193, 31, 248), rgb(84, 241, 249), rgb(193, 31, 248)) -100%/ 200%;
-	/* being excessively careful with compat, 
+	/* This style from codepens 
+   * being excessively careful with compat, 
 	 * though this has been supported unprefixed and 
 	 * in the shorthand across major browsers for a while;
 	 * but it catches the latest browser versions supported 
@@ -65,7 +66,7 @@ a.category-badge > span.badge:hover {
 }
 
 
-/* Styles for the separator container */
+/* Styles for the separator container I learned it from codepens */
 .separator {
   border: none; /* reset default hr styling if needed */
 }

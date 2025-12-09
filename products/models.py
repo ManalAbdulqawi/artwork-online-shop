@@ -48,7 +48,8 @@ class Image(models.Model):
 
 
 class Watchlist(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="watchlist")
+    user = models.ForeignKey(User, on_delete=models.CASCADE,
+                             related_name="watchlist")
     product = models.ForeignKey(
         "Product", on_delete=models.CASCADE, related_name="watched_by"
     )
