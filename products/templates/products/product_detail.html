@@ -16,9 +16,9 @@
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5" id="main-image-container">
                     {% if product.first_image %}
-                      <img id="mainImage" class="img-fluid " src="{{ product.first_image.image.url }}" alt="{{ product.name }}">
+                      <img id="mainImage" class="img-fluid mt-2" src="{{ product.first_image.image.url }}" alt="{{ product.name }}">
                     {% else %}
-                        <img id="mainImage" class="img-fluid " src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        <img id="mainImage" class="img-fluid mt-2" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                     {% endif %}
                 </div>
 
@@ -26,7 +26,7 @@
                 <div class="thumbnails d-flex flex-wrap gap-2 mb-5">
                 {% for image in images %}
                 <div class="thumbnail smallimg">
-                 <img src="{{ image.image.url }}" class="img-thumbnail" style="width:80px; height:auto;" data-full-url="{{ image.image.url }}" alt="{{ product.name }}>
+                 <img src="{{ image.image.url }}" class="img-thumbnail" style="width:80px; height:auto;" data-full-url="{{ image.image.url }}">
                 </div>
                 {% endfor %}
                 </div>
