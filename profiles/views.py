@@ -28,7 +28,7 @@ def profile(request):
 def orders_list(request):
     """Display the user's orders list."""
     profile = get_object_or_404(UserProfile, user=request.user)
-    orders = profile.orders.all()
+    orders = profile.orders.all().order_by('-date')
 
     template = "profiles/orders_list.html"
     context = {
