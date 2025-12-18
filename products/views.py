@@ -50,6 +50,7 @@ def all_products(request):
                 | Q(description__icontains=query)
                 | Q(size__icontains=query)
                 | Q(price__icontains=query)
+                | Q(category__friendly_name__icontains=query)
             )
             products = products.filter(queries)
     current_sorting = f"{sort}_{direction}"
